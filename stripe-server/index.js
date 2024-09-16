@@ -19,6 +19,7 @@ app.post("/stripe/charge", cors(), async (req, res) => {
       currency: "USD",
       description: "Your Company Description",
       payment_method: id,
+      return_url: 'https://example.com/return_url',
       confirm: true,
     });
     console.log("stripe-routes.js 19 | payment", payment);
